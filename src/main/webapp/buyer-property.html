@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Property Listing</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  .property {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  .property h3 {
+    margin-top: 0;
+  }
+  .property p {
+    margin: 5px 0;
+  }
+  .btn-group {
+    text-align: center;
+  }
+  .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #45a049;
+  }
+  .view-all {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Real Estate Property</h2>
+  <div class="property">
+    <h3>Beautiful Family Home</h3>
+    <p><strong>Location:</strong> Delhi</p>
+    <p><strong>Number of Bedrooms:</strong> 4</p>
+    <p><strong>Nearby Hospitals:</strong> 3</p>
+    <p><strong>Nearby Colleges:</strong> 2</p>
+    <div class="btn-group">
+      <button class="btn">I'm interested</button>
+     
+    </div>
+  </div>
+  
+  <div class="property">
+    <h3>Modern Apartment</h3>
+    <p><strong>Location:</strong> Bhopal</p>
+    <p><strong>Number of Bedrooms:</strong> 2</p>
+    <p><strong>Nearby Hospitals:</strong> 1</p>
+    <p><strong>Nearby Colleges:</strong> 3</p>
+    <div class="btn-group">
+      <button class="btn">I'm interested</button>
+      
+    </div>
+  </div>
+  
+  <div class="property">
+    <h3>Cozy Townhouse</h3>
+    <p><strong>Location:</strong> Bangalore</p>
+    <p><strong>Number of Bedrooms:</strong> 3</p>
+    <p><strong>Nearby Hospitals:</strong> 2</p>
+    <p><strong>Nearby Colleges:</strong> 1</p>
+    <div class="btn-group">
+      <button class="btn">I'm interested</button>
+    </div>
+  </div>
+  
+  <!-- More property listings can be added here -->
+  
+  <div class="view-all">
+    <button class="btn" id="viewAllBtn">View All</button>
+  </div>
+</div>
+
+<script>
+  // Function to toggle visibility of all property listings
+  document.getElementById("viewAllBtn").addEventListener("click", function() {
+    var properties = document.querySelectorAll(".property");
+    properties.forEach(function(property) {
+      property.style.display = "block";
+    });
+    // Hide the "View All" button after displaying all listings
+    this.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
